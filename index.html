@@ -15,7 +15,7 @@
   :root{
     --bg:#0c3f2c; --bg2:#072a1c; --card:rgba(255,255,255,.05); --cream:#f4ecdc; --muted:#cfc6b2;
     --gold:#d8b46a; --gold-l:#ecd39a; --line:rgba(216,180,106,.35); --dark:#1f2a20;
-    --goldbtn:linear-gradient(180deg,#ecd39a 0%,#d8b46a 100%);
+    --goldbtn:linear-gradient(180deg,#e3c47f 0%,#d6b264 100%);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-text-size-adjust:100%;background:var(--bg2)}
@@ -31,25 +31,27 @@
   .tagline{font-size:14px;color:var(--muted);margin-top:2px}
 
   /* Главное предложение */
-  .hero{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#3a1524;box-shadow:0 8px 24px rgba(0,0,0,.3)}
-  .hero img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#2a0f19}
-  .hero .in{padding:14px 16px 16px;background:#3a1524}
+  .hero{border-radius:18px;overflow:hidden;border:1px solid var(--gold);background:#0e3526;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+  .hero img{display:block;width:100%;aspect-ratio:12/5;object-fit:cover;background:#0b2c1f}
+  .hero .in{padding:14px 16px 16px;background:#0e3526}
+  .pill{display:inline-block;background:var(--gold);color:var(--dark);font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+    border-radius:999px;padding:4px 12px;margin-bottom:10px}
   .hero h1{font-family:Lora,Georgia,serif;font-weight:700;font-size:24px;line-height:1.18;color:var(--cream)}
-  .hero h1 .l2{display:block;color:var(--gold-l)}
+  .hero h1 .l2{display:block;color:var(--gold);font-size:30px;margin-top:2px}
   .hero .date{font-size:16px;margin-top:8px;color:var(--cream)}
   .hero .cond{font-size:14px;color:var(--muted);margin-top:4px}
   .btn-gold{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:50px;margin-top:14px;padding:12px 16px;border-radius:12px;
     background:var(--goldbtn);color:var(--dark);font-weight:700;font-size:17px;border:0;font-family:inherit;cursor:pointer}
   .btn-gold svg{width:20px;height:20px}
   .btn-line{display:flex;align-items:center;justify-content:center;width:100%;min-height:46px;margin-top:8px;padding:10px 16px;border-radius:12px;
-    border:1px solid var(--gold);color:var(--gold-l);font-weight:600;font-size:16px}
+    border:1px solid var(--gold);color:var(--cream);font-weight:600;font-size:16px}
 
   /* Ещё предложения */
   .offers{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
   .offer{display:flex;flex-direction:column;min-height:44px;border:1px solid var(--line);border-radius:14px;padding:12px;background:var(--card)}
   .offer b{font-family:Lora,Georgia,serif;font-size:17px;color:var(--gold-l);line-height:1.2}
   .offer span{font-size:14px;color:var(--muted);margin-top:4px;flex:1}
-  .offer i{font-style:normal;font-size:14px;font-weight:600;color:var(--cream);margin-top:8px}
+  .offer i{font-style:normal;font-size:15px;font-weight:600;color:var(--gold);margin-top:8px}
 
   h2{font-family:Lora,Georgia,serif;font-size:19px;font-weight:600;color:var(--gold);margin:18px 2px 8px}
 
@@ -125,9 +127,10 @@ const CONFIG = {
     until: "2026-11-29",
     line1: "Цветы ко Дню матери",
     line2: "−15% по предзаказу",
-    date: "День матери — 29 ноября",
+    tag: "Предзаказ",
+    date: "29 ноября · Порадуйте маму цветами.",
     conditions: "",
-    image: "",
+    image: "banners/mama.jpg",
     button:  { text: "Заказать со скидкой", url: MAX_CHAT,
                message: "Здравствуйте! Хочу заказать букет ко Дню матери со скидкой 15%" },
     button2: { text: "Посмотреть букеты", url: VK_CATALOG }
@@ -154,7 +157,7 @@ const CONFIG = {
   maxChat: { name: "Написать в MAX", sub: "Ответим и поможем с выбором", url: MAX_CHAT },
 
   chips: [
-    { name: "Telegram", sub: "новости и акции", url: "https://t.me/cvetyzubovo", color: "#27a6e5", icon: "plane", goal: "telegram" },
+    { name: "Telegram", sub: "написать нам", url: "https://t.me/flora_rest_ufa", color: "#27a6e5", icon: "plane", goal: "telegram" },
     { name: "ВКонтакте", sub: "каталог букетов", url: VK_CATALOG, color: "#0077ff", badge: "VK", goal: "vk" }
   ],
 
@@ -188,6 +191,7 @@ const p = (CONFIG.promo && (!CONFIG.promo.until || todayUfa <= CONFIG.promo.unti
 $("hero").innerHTML =
   (p.image ? `<img src="${esc(p.image)}" alt="${esc(p.line1)}">` : "") +
   `<div class="in">
+     ${p.tag ? `<span class="pill">${esc(p.tag)}</span>` : ""}
      <h1>${esc(p.line1)}<span class="l2">${esc(p.line2)}</span></h1>
      ${p.date ? `<div class="date">${esc(p.date)}</div>` : ""}
      ${p.conditions ? `<div class="cond">${esc(p.conditions)}</div>` : ""}
