@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ресторан Цветов — контакты</title>
+<meta name="description" content="Ресторан Цветов, Уфа: связаться с менеджером, телефон и адреса магазинов">
+<style>
+  /* Шрифты лежат рядом со страницей — без запросов к Google (152-ФЗ) */
+  @font-face{font-family:Lora;src:url(fonts/lora.woff) format("woff");font-weight:400 700;font-style:normal;font-display:swap}
+  @font-face{font-family:Lora;src:url(fonts/lora-italic.woff) format("woff");font-weight:400 700;font-style:italic;font-display:swap}
+  @font-face{font-family:Inter;src:url(fonts/inter-400.woff) format("woff");font-weight:400 500;font-display:swap}
+  @font-face{font-family:Inter;src:url(fonts/inter-600.woff) format("woff");font-weight:600 700;font-display:swap}
+  :root{
+    --bg:#0c3f2c; --bg2:#06261a; --card:rgba(255,255,255,.04); --ink:#f3ead6; --muted:#b9b29c;
+    --gold:#d4ae5a; --gold2:#f3dc95; --gold3:#a9802f; --line:rgba(212,174,90,.35); --r:18px;
+    --goldgrad:linear-gradient(135deg,#a9802f 0%,#f3dc95 45%,#c99a3e 70%,#f0d48a 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;background:var(--bg2)}
+  body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);line-height:1.4;min-height:100vh;
+    background:radial-gradient(120% 70% at 50% 0%,#145a3f 0%,var(--bg) 45%,var(--bg2) 100%) fixed}
+  .wrap{max-width:460px;margin:0 auto;padding:8px 16px 36px}
+  header{text-align:center;padding:0 0 14px}
+  .logo{display:block;width:62%;max-width:240px;margin:6px auto 0}
+  .hello{font-family:Lora,Georgia,serif;font-style:italic;font-size:19px;color:var(--gold2);margin-top:2px}
+
+  /* Баннеры */
+  .slider{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .track::-webkit-scrollbar{display:none}
+  .slide{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/3;position:relative;display:flex;align-items:flex-end;color:var(--ink);text-decoration:none}
+  .slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .slide .txt{position:relative;padding:20px;width:100%;background:linear-gradient(transparent,rgba(0,0,0,.45))}
+  .slide h2{font-family:Lora,Georgia,serif;font-size:28px;line-height:1.05;font-weight:700;
+    background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .slide p{font-size:14px;margin-top:6px;opacity:.95}
+  .slide .cta{display:inline-block;margin-top:12px;background:var(--goldgrad);color:#1d2a1f;font-weight:700;font-size:14px;padding:8px 16px;border-radius:999px}
+  .dots{position:absolute;top:12px;right:12px;display:flex;gap:6px}
+  .dot{width:8px;height:8px;border-radius:50%;background:rgba(243,220,149,.4);border:0;padding:0;cursor:pointer}
+  .dot.on{background:var(--gold2);width:20px;border-radius:4px}
+
+  /* Кнопки */
+  h3{font-family:Lora,Georgia,serif;font-size:20px;font-weight:600;color:var(--gold);margin:26px 4px 10px;text-align:center;letter-spacing:.5px}
+  h3::before,h3::after{content:"";display:inline-block;width:34px;height:1px;background:var(--line);vertical-align:middle;margin:0 10px}
+  .list{display:flex;flex-direction:column;gap:10px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .btn{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;color:var(--ink);text-decoration:none;font-size:16px;font-weight:600;width:100%;font-family:inherit;text-align:left;backdrop-filter:blur(2px)}
+  .btn:active{transform:scale(.99);background:rgba(212,174,90,.12)}
+  .btn .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:0 0 40px;color:#fff}
+  .btn .ic svg{width:22px;height:22px}
+  .btn .sub{display:block;font-size:13px;color:var(--muted);font-weight:500;margin-top:1px}
+  .btn .grow{flex:1}
+  .grid .btn{flex-direction:column;gap:8px;text-align:center;font-size:15px;padding:14px 8px}
+  .btn.gold{background:var(--goldgrad);color:#1d2a1f;border:0}
+  .btn.gold .sub{color:#3c3a26}
+  .btn.gold .ic{background:rgba(12,63,44,.9);color:var(--gold2)}
+  .btn.off{opacity:.5;pointer-events:none}
+  .addr .btn{align-items:flex-start}
+  .addr .ic{background:transparent;border:1px solid var(--gold);color:var(--gold2)}
+  .note{font-size:14px;color:var(--muted);margin-top:10px;text-align:center;font-style:italic}
+  footer{margin-top:22px}
+  footer{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img class="logo" src="logo.webp" alt="Ресторан Цветов" id="brand">
+    <div class="hello" id="hello"></div>
+  </header>
+
+  <div class="slider">
+    <div class="track" id="track"></div>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <h3>Связаться с нами</h3>
+  <div class="list" id="contacts"></div>
+  <div class="note" id="note"></div>
+
+  <h3>Наши магазины</h3>
+  <div class="list addr" id="shops"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+/* ====== НАСТРОЙКИ СТРАНИЦЫ — всё, что меняется, здесь ====== */
+const CONFIG = {
+  brand: "Ресторан Цветов",
+  hello: "Здравствуйте! Рады, что вы с нами 🌷",
+
+  // Баннеры: перелистываются автоматически. image — ссылка на картинку (необязательно);
+  // без картинки используется фон bg. link — куда ведёт нажатие (необязательно).
+  bannerSeconds: 5,
+  banners: [
+    { title: "Предзаказ к 8 марта", text: "Закажите заранее — соберём к нужному часу", cta: "Написать нам", link: "#contacts",
+      bg: "radial-gradient(circle at 80% 20%,#7a2f45,#3b1422)" },
+    { title: "Подписка на цветы", text: "Свежий букет каждую неделю — без хлопот", cta: "Узнать подробнее", link: "#contacts",
+      bg: "radial-gradient(circle at 80% 20%,#1d7350,#08301f)" },
+    { title: "Букет ко дню рождения", text: "Поможем выбрать и доставим", cta: "Смотреть каталог", link: "https://vk.com/market-222119916?screen=group",
+      bg: "radial-gradient(circle at 80% 20%,#5b4a1e,#231a08)" }
+  ],
+
+  phone: "+79270810209",
+
+  // Каналы и каталог (идут после кнопки звонка). Пустой url — кнопка показывается бледной.
+  links: [
+    { name: "Написать в MAX",    sub: "Ответим в мессенджере", url: "https://max.ru/u/f9LHodD0cOLPcxpZ28BFtZuxeIFtUzkaDAytHK9HcMKKMsBY7CD9Fsez-CU", color: "#6a4cff", icon: "chat" },
+    { name: "Telegram-канал",    sub: "Новинки и акции",    url: "https://t.me/cvetyzubovo", color: "#27a6e5", icon: "plane" },
+    { name: "Каталог ВКонтакте", sub: "Букеты с ценами",    url: "https://vk.com/market-222119916?screen=group", color: "#0077ff", icon: "bag" },
+  ],
+
+  shops: [
+    { name: "Зубово",     address: "ул. Серебряная, 91",          map: "https://2gis.ru/ufa/geo/70000001026955323" },
+    { name: "Михайловка", address: "Проезд Мебельщиков, 10/1",    map: "https://2gis.ru/ufa/geo/70000001080571287" },
+    { name: "Центр",      address: "ул. Ленина, 66",              map: "https://2gis.ru/ufa/geo/70000001104066420" }
+  ],
+
+  note: "…и другие соцсети"
+};
+/* ====== конец настроек ====== */
+
+const ICONS = {
+  chat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
+  plane:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3 2 11l7 2.5L11.5 21 22 3z"/><path d="m9 13.5 5-4"/></svg>',
+  "phone-chat":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.3 7.9L3 21l1.2-4.5A9 9 0 1 1 21 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2L9 9.5z"/></svg>',
+  phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+  bag:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>',
+  camera:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  down:'<svg class="chev" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>'
+};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const ext = 'target="_blank" rel="noopener"';
+const fmtPhone = p => p.replace(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})$/, "+7 $1 $2-$3-$4");
+
+document.getElementById("hello").textContent = CONFIG.hello;
+document.getElementById("note").textContent = CONFIG.note;
+document.getElementById("foot").textContent = "© " + new Date().getFullYear() + " " + CONFIG.brand;
+
+/* Баннеры */
+const track = document.getElementById("track"), dots = document.getElementById("dots");
+CONFIG.banners.forEach((b, i) => {
+  const tag = b.link ? "a" : "div";
+  const href = b.link ? ` href="${esc(b.link)}" ${b.link.startsWith("#") ? "" : ext}` : "";
+  track.insertAdjacentHTML("beforeend",
+    `<${tag} class="slide"${href} style="background:${esc(b.bg || "#2f4a3a")}">
+      ${b.image ? `<img src="${esc(b.image)}" alt="${esc(b.title)}" loading="${i ? "lazy" : "eager"}">` : ""}
+      <div class="txt">${b.title ? `<h2>${esc(b.title)}</h2>` : ""}${b.text ? `<p>${esc(b.text)}</p>` : ""}${b.cta ? `<span class="cta">${esc(b.cta)}</span>` : ""}</div>
+    </${tag}>`);
+  if (CONFIG.banners.length > 1) dots.insertAdjacentHTML("beforeend", `<button class="dot" aria-label="Баннер ${i+1}"></button>`);
+});
+const dotEls = [...dots.children];
+let cur = 0, timer;
+const go = i => { cur = (i + CONFIG.banners.length) % CONFIG.banners.length; track.scrollTo({left: cur * track.clientWidth, behavior: "smooth"}); };
+const mark = () => dotEls.forEach((d, k) => d.classList.toggle("on", k === cur));
+track.addEventListener("scroll", () => { cur = Math.round(track.scrollLeft / track.clientWidth); mark(); }, {passive:true});
+dotEls.forEach((d, k) => d.onclick = () => { go(k); restart(); });
+const restart = () => { clearInterval(timer); if (CONFIG.banners.length > 1) timer = setInterval(() => go(cur + 1), CONFIG.bannerSeconds * 1000); };
+["touchstart","mousedown"].forEach(e => track.addEventListener(e, restart, {passive:true}));
+mark(); restart();
+
+/* Контакты */
+const c = document.getElementById("contacts");
+c.insertAdjacentHTML("beforeend",
+  `<a class="btn gold" href="tel:${esc(CONFIG.phone)}">
+     <span class="ic">${ICONS.phone}</span>
+     <span class="grow">Позвонить<span class="sub">${fmtPhone(CONFIG.phone)}</span></span>
+   </a>
+   ${CONFIG.links.map(l => `<a class="btn${l.url ? "" : " off"}" href="${esc(l.url || "#")}" ${ext}><span class="ic" style="background:${l.color}">${ICONS[l.icon]}</span><span class="grow">${esc(l.name)}<span class="sub">${l.url ? esc(l.sub) : "ссылка скоро появится"}</span></span></a>`).join("")}`);
+// Баннер со ссылкой "#contacts" прокручивает к контактам
+track.addEventListener("click", e => { const a = e.target.closest('a[href="#contacts"]'); if (a) { e.preventDefault(); document.getElementById("contacts").scrollIntoView({behavior:"smooth", block:"center"}); } });
+
+/* Магазины */
+document.getElementById("shops").innerHTML = CONFIG.shops.map(s =>
+  `<a class="btn" href="${esc(s.map)}" ${ext}>
+     <span class="ic">${ICONS.pin}</span>
+     <span class="grow">${esc(s.name)}<span class="sub">${esc(s.address)} · открыть в 2ГИС</span></span>
+   </a>`).join("");
+</script>
+</body>
+</html>
