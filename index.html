@@ -87,6 +87,7 @@
 </style>
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/114304796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <div class="wrap">
   <header>
     <img class="logo" src="logo.webp" alt="Ресторан Цветов">
@@ -117,7 +118,7 @@ const CONFIG = {
   tagline: "Цветы с доставкой по Уфе и пригороду",
 
   // Яндекс Метрика: номер счётчика (цифры). Пусто — учёт выключен.
-  metrikaId: "",
+  metrikaId: "114304796",
 
   // Главная акция. После даты until (включительно, по Уфе) вместо неё показывается fallback.
   // image — фото букета, например "banners/mama.jpg". Пусто — без фото.
@@ -241,8 +242,8 @@ document.addEventListener("click", e => { const a = e.target.closest("[data-goal
 if (MID) {
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-  ym(MID, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js?id=" + MID, "ym");
+  ym(MID, "init", { ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer:document.referrer, url:location.href, accurateTrackBounce:true, trackLinks:true });
 }
 </script>
 </body>
